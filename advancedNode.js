@@ -31,10 +31,10 @@ for (let i = 1; i <= 10; i++) {
 }
 
 const url = require('url');
-let webAddress = 'http://localhost:2000/index.html?lastName=Kent&firstName=Clark';
+let webAddress = 'https://example.com/over/there?name=ferret';
 let qry = url.parse(webAddress, true);
-let qrydata = qry.query; //returns an object: {lastName: 'Kent', firstName: 'Clark'}
-console.log(qrydata.firstName); //outputs Clark
+let qrydata = qry.query; //returns an object: {name: 'ferret'}
+console.log(qrydata.name); //outputs ferret
 
 let qry = require('querystring');
 let qryParams = qry.parse('lastName=Kent&firstName=Clark');
